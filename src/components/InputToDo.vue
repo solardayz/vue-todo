@@ -1,10 +1,23 @@
 <template>
-  <h1>Input</h1>
+  <div>
+    <input type="text" v-model="collectedTodo">
+    <button v-on:click="addToDo">입력</button>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "InputToDo"
+  name: "InputToDo",
+  data: function () {
+    return {
+      collectedTodo: ""
+    }
+  },
+  methods: {
+    addToDo: function () {
+      sessionStorage.setItem(this.collectedTodo, this.collectedTodo)
+    }
+  }
 }
 </script>
 

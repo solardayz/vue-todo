@@ -1,5 +1,7 @@
 <template>
-  <h1>Header</h1>
+  <header>
+    <h1>TODO APP</h1>
+  </header>
 </template>
 
 <script>
